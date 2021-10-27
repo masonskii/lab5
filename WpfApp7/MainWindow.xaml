@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="675.75">
+    <Grid KeyDown="UIElement_OnKeyDown" KeyUp="UIElement_OnKeyUp" Margin="0,0,2,0">
+
+        <DataGrid AutoGenerateColumns="False" Name="Code" KeyDown="UIElement_OnKeyDown" KeyUp="UIElement_OnKeyUp" Margin="0,0,0,180">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="DownUpKey" Header="Down\Up" Width="100"  Binding="{Binding ElementName=downUp}"></DataGridTextColumn>
+                <DataGridTextColumn Header="KeyCode" Width="100"  Binding="{Binding ElementName=keyCode}"></DataGridTextColumn>
+                <DataGridTextColumn Header="KeyValue" Width="100"  Binding="{Binding  ElementName=keyValue}"></DataGridTextColumn>
+                <DataGridTextColumn Header="KeyState" Width="100"  Binding="{Binding  ElementName=keyState}"></DataGridTextColumn>
+                <DataGridTextColumn Header="KeyChar" Width="100"  Binding="{Binding  ElementName=keyChar}"></DataGridTextColumn>
+                <DataGridTextColumn Header="SystemKey" Width="100"  Binding="{Binding ElementName=systemKey}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
